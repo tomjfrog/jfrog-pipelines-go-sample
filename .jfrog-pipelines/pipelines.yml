@@ -29,7 +29,7 @@ pipelines:
         type: GoBuild
         configuration:
           sourceLocation: .
-          resolverRepo: quickstart-go-virtual
+          resolverRepo: pipelines-quickstart-go
           noRegistry: true
           inputResources:
             - name: go_repo
@@ -42,7 +42,7 @@ pipelines:
         configuration:
           inputSteps:
             - name: build_go
-          targetRepository: quickstarts-go-local
+          targetRepository: pipelines-quickstart-go
           integrations:
             - name: {{ .Values.artifactory }}
 
